@@ -18,3 +18,12 @@ body {
   background-size:cover;
   position: relative;
 }
+.mensaje {
+  font-family: "ComicKids-WyvKG";
+  background-color: white;
+  padding: 3px;
+}
+
+.mensaje p {
+  margin-left: 10px;
+}
