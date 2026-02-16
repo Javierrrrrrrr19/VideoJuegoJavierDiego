@@ -1,0 +1,59 @@
+Realizado por: Diego Perez Labrado y Javier Romero Flox
+ESCENA 1: Fuera de la casa
+Resumen:
+Entras en la casa para buscar los polvos mágicos(Fresquito). Para entrar debes resolver una pregunta matemática. Para entrar debes resolver 3 acertijos
+Texto:
+J-Me han dicho unos amigos que en esa casa hay polvos mágicos.
+
+N-Para entrar a la casa debes de resolver 3 acertijos.
+ESCENA 2:
+Resumen:
+Dentro de la casa puedes ir a 2 habitaciones.
+Texto:
+N-Oyes una melodí­a que proviene de la habitación de la izquierda
+Si eliges la otra puerta:
+N-No puedes abrirla debes de encontrar un código
+ESCENA 3:
+Resumen:
+Debes de encontrar los polvos mágicos, pero no avanzas hasta hacer click a la caja de música.
+Texto:
+J-Esta caja de música me esta poniendo de los nervios
+Click en la caja:
+N-La caja contenía en su interior un código
+ESCENA 4:
+Resumen:
+Para abrir la puerta necesitas un código, una vez entras a la habitación debes encontrar las 3 llaves. Con ellas haces click en el armario y descubres el sótano oculto
+Texto:
+N-Esta puerta necesita de un código para abrirse
+
+N-Hay 3 llaves escondidas en esta habitación con ellas podrás abrir el armario
+ESCENA 5:
+Resumen:
+Entras al sótano el cual se encuentra apagado.
+Texto:
+J-No veo nada, espero que haya alguna forma de encender la luz
+ESCENA 6:
+Resumen:
+Una vez encendida la luz. Hay una caja fuerte en el lugar.
+Texto:
+J-Ahí podrí­a estar lo que busco
+ESCENA 7:
+Resumen:
+Intentas abrir la caja fuerte. Para abrirla y conseguir los polvos mágicos debes resolver un problema matemático.
+Texto:
+N-Para abrir la caja debes de resolver este acertijo
+ESCENA 8:
+Resumen:
+Consigues los polvos mágicos, te dan la opción de tomarlos
+Texto:
+J-Los he encontrado
+ESCENA 8.1:
+Resumen:
+No los tomas y pierdes porque no entiendes porque has hecho entonces todo eso
+Texto:
+N-Has perdido. No has cumplido tu objetivo, ¿Entonces para que te esmeras tanto por conseguirlo?
+ESCENA 8.2:
+Resumen:
+Los toma y ganas, ta eres feliz para siempre
+Texto:
+N-Has ganado. Lo has conseguido, ahora eres feliz
