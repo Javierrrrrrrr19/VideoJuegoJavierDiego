@@ -14,7 +14,7 @@ body {
 .escena {
   height: 784px;
   margin: auto;
-  background-image: url("../img/mansion.jpg"); /* Imagen de Wombo Dream */
+  background-image: url("../img/Casa.png"); /* Imagen de Wombo Dream */
   background-size:cover;
   position: relative;
 }
