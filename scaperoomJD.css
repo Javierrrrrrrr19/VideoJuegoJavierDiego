@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "ComicKids-WyvKG";
+  src: url("../fonts/ComicKids-WyvKG.otf");
+}
+body {
+  background: radial-gradient(#712424, #2c337b);
+}
+/* FIJAMOS el ancho y la posición de la escena y de los mensajes */
+.escena, .mensaje {
+  width: 480px;
+  margin: auto;
+}
+/* La escena tendrá como fondo la mansión, ¡¡ sólo al cargar la página !! */
+.escena {
+  height: 784px;
+  margin: auto;
+  background-image: url("../img/mansion.jpg"); /* Imagen de Wombo Dream */
+  background-size:cover;
+  position: relative;
+}
