@@ -27,3 +27,23 @@ body {
 .mensaje p {
   margin-left: 10px;
 }
+
+.puerta1 {
+  width: 39px;
+  height: 63px;
+  background-color: white;
+  position: absolute;
+  left:240px;
+  top: 339px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.puerta2 {
+  width: 39px;
+  height: 63px;
+  background-color: transparent;
+  position: none;
+  left:240px;
+  top: 439px;
+  border-radius: 5px 5px 0px 0px;
+}

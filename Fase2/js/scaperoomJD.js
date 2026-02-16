@@ -14,17 +14,15 @@
 */
 
 // Desde ESCENA1: Al hacer click en la puerta de la mansión cambia a la escena2
-function entra() {
-  // Cambio la imagen de fondo cuando entro en la mansión.
-  document.getElementById("principal").style.backgroundImage = "url(img/sotanoApagado.jpg)";
+function entrada() {
   // Oculto la puerta, ya no vamos a utilizarla
-  document.getElementById("puerta").style.display = "none";
-  // Muestro el interruptor, no se verá muy bien
-  document.getElementById("interruptor").style.display = "block";
+  document.getElementById("puerta1").style.display = "none";
+  // Muestro la puerta, para entrar a la mansión
+  document.getElementById("puerta2").style.display = "absolute";
+  document.getElementById("puerta2").style.backgroundColor = "white";
   // Cambio el mensaje del bocadillo
-  document.getElementById("parrafo1").innerHTML = "Oyes a Togo en el sótano.";
-  document.getElementById("parrafo2").innerHTML = "Al bajar, se cierra la puerta y te quedas a oscuras.";
-  document.getElementById("parrafo3").innerHTML = "Busca un interruptor";
+  document.getElementById("parrafo1").innerHTML = "Para entrar a la casa debes de resolver 3 acertijos";
+  document.getElementById("parrafo2").innerHTML = "";
 }
 // Desde ESCENA2: Al hacer click en el interruptor, se enciende la luz... Sólo si estaba apagada
 function enciende() {
