@@ -10,13 +10,13 @@
 </head>
 <body>
   <main class="escena" id="principal">
-    <div class="puerta1" id="puerta1" onclick="entrada()"></div>
-    <div class="acertijos" id="acertijo1">
-      <p><label for=""></label><br>
-      <input type="text" id=""></p>
-      <p><input type="button" value="Calcular precio" onclick="Respuesta()"></p>
+    <div class="puerta" id="puerta" onclick="entrada()"></div>
+    <div class="acertijos" id="acertijos">
+      <p><label for="respuesta" id="pregunta">Este banco está ocupado por un padre y su hijo, el padre se llama Juan y el hijo ya te lo he dicho</label><br>
+      <input type="text" id="respuesta"></p>
+      <p><input type="button" value="Respuesta" onclick="respuesta()"></p>
+      <div id="divincorrecto"></div>
     </div>
-    <div class="puerta2" id="puerta2" onclick="entra()"></div>
     <div class="interruptor" id="interruptor" onclick="enciende()"></div>
     <div class="" id="pata" onclick="saleTogo()"></div>
     

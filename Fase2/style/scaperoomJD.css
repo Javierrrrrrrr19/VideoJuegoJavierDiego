@@ -28,7 +28,7 @@ body {
   margin-left: 10px;
 }
 
-.puerta1 {
+.puerta {
   width: 39px;
   height: 63px;
   background-color: transparent;
@@ -38,12 +38,16 @@ body {
   border-radius: 5px 5px 0px 0px;
 }
 
-.puerta2 {
-  width: 39px;
-  height: 63px;
-  background-color: transparent;
+.acertijos{
+  font-family: "ComicKids-WyvKG";
+  background-color: lightcoral;
+  padding: 3px;
   position: absolute;
-  left:240px;
-  top: 339px;
-  border-radius: 5px 5px 0px 0px;
+  display: none;
+  top: 539px;
+}
+
+#divincorrecto{
+  margin: auto;
+  width: fit-content;
 }

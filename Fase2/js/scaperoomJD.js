@@ -16,14 +16,30 @@
 // Desde ESCENA1: Al hacer click en la puerta de la mansión cambia a la escena2
 function entrada() {
   // Oculto la puerta, ya no vamos a utilizarla
-  document.getElementById("puerta1").style.display = "none";
-  // Muestro la puerta, para entrar a la mansión
-  document.getElementById("puerta2").style.display = "block";
-  document.getElementById("puerta2").style.backgroundColor = "white";
+  document.getElementById("puerta").style.display = "none";
+  // Muestro los acertijos, para entrar a la mansión
+  document.getElementById("acertijos").style.display = "block";
   // Cambio el mensaje del bocadillo
   document.getElementById("parrafo1").innerHTML = "Para entrar a la casa debes de resolver 3 acertijos";
   document.getElementById("parrafo2").innerHTML = "";
 }
+
+let contenedor = document.getElementById("divincorrecto");
+let texto = document.createElement("span");
+contenedor.appendChild(texto);
+function respuesta() {
+  // Recojo la respuesta y lo paso a minúscula
+  let respuesta = document.getElementById("respuesta").value.toLowerCase();
+  //Si la respuesta es esteban oculto el div y cambio el mensaje
+  if(respuesta == "esteban"){
+    document.getElementById("acertijos").style.display = "none";
+    document.getElementById("parrafo1").innerHTML = "Para entrar a la casa debes de resolver 2 acertijos";
+  }else{//Si la respuesta no es esteban indico que se ha equivocado
+    texto.textContent = "Respuesta incorrecta";
+    contenedor.style.backgroundColor = "lightcoral";
+  }
+}
+
 // Desde ESCENA2: Al hacer click en el interruptor, se enciende la luz... Sólo si estaba apagada
 function enciende() {
   // Cambio la imagen de fondo cuando enciendo la luz
