@@ -42,7 +42,7 @@ body {
   width: 39px;
   height: 63px;
   background-color: transparent;
-  position: none;
+  position: absolute;
   left:240px;
   top: 439px;
   border-radius: 5px 5px 0px 0px;

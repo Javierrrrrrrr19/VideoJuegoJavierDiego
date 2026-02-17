@@ -18,7 +18,7 @@ function entrada() {
   // Oculto la puerta, ya no vamos a utilizarla
   document.getElementById("puerta1").style.display = "none";
   // Muestro la puerta, para entrar a la mansión
-  document.getElementById("puerta2").style.display = "absolute";
+  document.getElementById("puerta2").style.display = "block";
   document.getElementById("puerta2").style.backgroundColor = "white";
   // Cambio el mensaje del bocadillo
   document.getElementById("parrafo1").innerHTML = "Para entrar a la casa debes de resolver 3 acertijos";
