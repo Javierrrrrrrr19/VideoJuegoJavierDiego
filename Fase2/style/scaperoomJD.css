@@ -31,7 +31,7 @@ body {
 .puerta1 {
   width: 39px;
   height: 63px;
-  background-color: white;
+  background-color: transparent;
   position: absolute;
   left:240px;
   top: 339px;
@@ -44,6 +44,6 @@ body {
   background-color: transparent;
   position: absolute;
   left:240px;
-  top: 439px;
+  top: 339px;
   border-radius: 5px 5px 0px 0px;
 }
