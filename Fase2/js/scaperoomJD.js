@@ -31,15 +31,25 @@ function respuesta() {
   // Recojo la respuesta y lo paso a minúscula
   let respuesta = document.getElementById("respuesta").value.toLowerCase();
   //Si la respuesta es esteban oculto el div y cambio el mensaje
-  if(respuesta == "esteban"){
-    document.getElementById("acertijos").style.display = "none";
+  if (respuesta == "esteban") {
+    document.getElementById("pregunta").innerHTML = "Tienes una cerilla y entras en una habitación oscura con <br>-una vela, <br>-una lampara de aceite <br>-una chimenea<br> ¿Que enciendes primero?";
     document.getElementById("parrafo1").innerHTML = "Para entrar a la casa debes de resolver 2 acertijos";
-  }else{//Si la respuesta no es esteban indico que se ha equivocado
+    document.getElementById("respuesta").value = "";
+  } else if (respuesta == "cerilla") {
+    document.getElementById("pregunta").innerHTML = "Tom mide 1,80 y trabaja en una carnieceriá y lleva zapatos de la talla 45<br> ¿Que pesa?";
+    document.getElementById("parrafo1").innerHTML = "Para entrar a la casa debes de resolver 1 acertijo";
+    document.getElementById("respuesta").value = "";
+  } else if (respuesta == "carne") {
+    document.getElementById("acertijos").style.display = "none";
+    document.getElementById("parrafo1").innerHTML = "Oyes una melodía que proviene de la habitación de la izquierda";
+    document.getElementById("principal").style.backgroundImage = "url(img/Pasillo.png)";
+    document.getElementById("respuesta").value = "";
+  } else {//Si la respuesta no es esteban indico que se ha equivocado
     texto.textContent = "Respuesta incorrecta";
     contenedor.style.backgroundColor = "lightcoral";
   }
 }
-
+//
 // Desde ESCENA2: Al hacer click en el interruptor, se enciende la luz... Sólo si estaba apagada
 function enciende() {
   // Cambio la imagen de fondo cuando enciendo la luz
