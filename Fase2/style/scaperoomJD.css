@@ -51,3 +51,21 @@ body {
   margin: auto;
   width: 480px;
 }
+
+.derecha {
+  width: 39px;
+  height: 63px;
+  background-color: white;
+  position: absolute;
+  left:240px;
+  top: 339px;
+}
+
+.izquierda {
+  width: 39px;
+  height: 63px;
+  background-color: white;
+  position: absolute;
+  left:240px;
+  top: 339px;
+}
