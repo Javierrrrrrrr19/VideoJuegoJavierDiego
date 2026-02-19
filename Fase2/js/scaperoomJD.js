@@ -49,6 +49,14 @@ function respuesta() {
     contenedor.style.backgroundColor = "lightcoral";
   }
 }
+
+
+
+
+
+
+
+
 //
 // Desde ESCENA2: Al hacer click en el interruptor, se enciende la luz... Sólo si estaba apagada
 function enciende() {
@@ -58,12 +66,7 @@ function enciende() {
   document.getElementById("interruptor").style.backgroundImage = "url(img/interruptor.png)";
   // Evitamos que el interruptor vuelva a ser pulsado, desactivando los eventos de ratón
   document.getElementById("interruptor").style.pointerEvents = "none";
-  // Mostramos la pata de Togo
-  document.getElementById("pata").style.display = "block";
-  // Cambio el mensaje del bocadillo
-  document.getElementById("parrafo1").innerHTML = "Ahora que ves bien, puedes buscar a Togo";
-  document.getElementById("parrafo2").innerHTML = "¿Dónde puede estar?";
-  document.getElementById("parrafo3").innerHTML = "";
+  //
 }
 // Desde ESCENA3: Al hacer click en la pata de Togo, aparece el perro
 function saleTogo() {
