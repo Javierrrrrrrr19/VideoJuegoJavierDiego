@@ -53,19 +53,19 @@ body {
 }
 
 .derecha {
-  width: 39px;
-  height: 63px;
+  width: 58px;
+  height: 403px;
   background-color: white;
   position: absolute;
-  left:240px;
-  top: 339px;
+  left:420px;
+  top: 139px;
 }
 
 .izquierda {
-  width: 39px;
-  height: 63px;
+  width: 79px;
+  height: 412px;
   background-color: white;
   position: absolute;
-  left:240px;
-  top: 339px;
+  left:20px;
+  top: 129px;
 }
