@@ -1,6 +1,7 @@
 /*
 * ESCENAS:
 *   - ESCENA1: Se ve la mansión
+*   - ESCENA2: Pasillo
 *   - ESCENA2: Se ve el sótano sin luz
 *   - ESCENA3: Se ve el sótano encendido
 *   - ESCENA4: Se ve a Togo en el sótano encendido
@@ -35,21 +36,23 @@ function respuesta() {
     document.getElementById("pregunta").innerHTML = "Tienes una cerilla y entras en una habitación oscura con <br>-una vela, <br>-una lampara de aceite <br>-una chimenea<br> ¿Que enciendes primero?";
     document.getElementById("parrafo1").innerHTML = "Para entrar a la casa debes de resolver 2 acertijos";
     document.getElementById("respuesta").value = "";
+  //Si la respuesta es cerilla oculto el div y cambio el mensaje
   } else if (respuesta == "cerilla") {
     document.getElementById("pregunta").innerHTML = "Tom mide 1,80 y trabaja en una carnieceriá y lleva zapatos de la talla 45<br> ¿Que pesa?";
     document.getElementById("parrafo1").innerHTML = "Para entrar a la casa debes de resolver 1 acertijo";
     document.getElementById("respuesta").value = "";
+  //Si la respuesta es carne oculto el div y cambio el mensaje
   } else if (respuesta == "carne") {
     document.getElementById("acertijos").style.display = "none";
     document.getElementById("parrafo1").innerHTML = "Oyes una melodía que proviene de la habitación de la izquierda";
     document.getElementById("principal").style.backgroundImage = "url(img/Pasillo.png)";
     document.getElementById("respuesta").value = "";
-  } else {//Si la respuesta no es esteban indico que se ha equivocado
+  } else {//Si la respuesta no es alguna de las anteriores indico que se ha equivocado
     texto.textContent = "Respuesta incorrecta";
     contenedor.style.backgroundColor = "lightcoral";
   }
 }
-// Desde ESCENA2: Al hacer click en la puerta de la mansión cambia a la escena2
+// Desde ESCENA2: Al superar los acertijos cambia a la escena2
 function derechaBlok() {
   // Oculto la puerta, ya no vamos a utilizarla
   document.getElementById("puerta").style.display = "none";
