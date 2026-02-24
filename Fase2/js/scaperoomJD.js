@@ -24,7 +24,6 @@ function entrada() {
   document.getElementById("parrafo1").innerHTML = "Para entrar a la casa debes de resolver 3 acertijos";
   document.getElementById("parrafo2").innerHTML = "";
 }
-
 let contenedor = document.getElementById("divincorrecto");
 let texto = document.createElement("span");
 contenedor.appendChild(texto);
@@ -44,7 +43,7 @@ function respuesta() {
   //Si la respuesta es carne oculto el div y cambio el mensaje
   } else if (respuesta == "carne") {
     document.getElementById("acertijos").style.display = "none";
-    document.getElementById("parrafo1").innerHTML = "Oyes una melodía que proviene de la habitación de la izquierda";
+    document.getElementById("parrafo1").innerHTML = "Oyes una melodía que proviene de una de las habitaciones";
     document.getElementById("principal").style.backgroundImage = "url(img/Pasillo.png)";
     document.getElementById("respuesta").value = "";
   } else {//Si la respuesta no es alguna de las anteriores indico que se ha equivocado
@@ -54,13 +53,73 @@ function respuesta() {
 }
 // Desde ESCENA2: Al superar los acertijos cambia a la escena2
 function derechaBlok() {
-  // Oculto la puerta, ya no vamos a utilizarla
-  document.getElementById("puerta").style.display = "none";
-  // Muestro los acertijos, para entrar a la mansión
-  document.getElementById("acertijos").style.display = "block";
+  //Muestro el mensaje
+  document.getElementById("parrafo1").innerHTML = "Necesitas un código para abrir la puerta";
+}
+//Desde ESCENA3: Habitación 1
+function entradaIzq() {
+  // Oculto la puerta de la izquierda y la derecha, ya no vamos a utilizarla
+  document.getElementById("izquierda").style.display = "none";
+  document.getElementById("derechaBlock").style.display = "none";
+  //Cambio el fondo
+  document.getElementById("principal").style.backgroundImage = "url(img/hab1.png)";
+  //Muestro la caja de música
+  document.getElementById("cajamusica").style.display = "block";
   // Cambio el mensaje del bocadillo
-  document.getElementById("parrafo1").innerHTML = "Para entrar a la casa debes de resolver 3 acertijos";
-  document.getElementById("parrafo2").innerHTML = "";
+  document.getElementById("parrafo1").innerHTML = "Encuentra la caja música";
+}
+function codigo() {
+  // Oculto la puerta de la izquierda, ya no vamos a utilizarla
+  document.getElementById("cajamusica").style.display = "none";
+  //Cambio el fondo
+  document.getElementById("principal").style.backgroundImage = "url(img/hab1.png)";
+  //Mostramos el código
+  document.getElementById("codigo").style.display = "block";
+  // Cambio el mensaje del bocadillo
+  document.getElementById("parrafo1").innerHTML = "J-Este código lo puedar en la otra puerta";
+}
+function volver() {
+  //Oculto el código
+  document.getElementById("codigo").style.display = "none";
+  //Cambio el fondo
+  document.getElementById("principal").style.backgroundImage = "url(img/Pasillo.png)";
+  //Muestro los nuevos trigger de las puertas
+  document.getElementById("izquierdaBlock").style.display = "block";
+  document.getElementById("derecha").style.display = "block";
+  //Muestro el mensaje
+  document.getElementById("parrafo1").innerHTML = "J-Probemos";
+}
+function izquierdaBlock() {
+  //Muestro el mensaje
+  document.getElementById("parrafo1").innerHTML = "Para que volver aquí";
+}
+//Desde ESCENA3: Habitación 1
+function entradaDer() {
+  // Oculto la puerta de la izquierda, ya no vamos a utilizarla
+  document.getElementById("derecha").style.display = "none";
+  document.getElementById("izquierdaBlock").style.display = "none";
+  //Mostramos para intoducir el código
+  document.getElementById("codigoP").style.display = "block";
+  // Cambio el mensaje del bocadillo
+  document.getElementById("parrafo1").innerHTML = "Pon el código";
+}
+//Desde ESCENA3: Habitación 2
+let contenedordos = document.getElementById("divincorrecto2");
+let textodos = document.createElement("span");
+contenedordos.appendChild(textodos);
+function probar() {
+  // Recojo la respuesta y lo paso a número
+  let respuesta = document.getElementById("codigoAceptado").valueAsNumber;
+  //Si la respuesta es correcta oculto el div y cambio el mensaje
+  if (respuesta == 1985) {
+    document.getElementById("codigoP").style.display = "none";
+    document.getElementById("principal").style.backgroundImage = "url(img/hab2.png)";
+    document.getElementById("parrafo1").innerHTML = "Encuentra las llaves";
+    document.getElementById("codigoAceptado").value = "";
+  } else {//Si la respuesta no es alguna de las anteriores indico que se ha equivocado
+    textodos.textContent = "Respuesta incorrecta";
+    contenedordos.style.backgroundColor = "lightcoral";
+  }
 }
 // Desde ESCENA2: Al hacer click en el interruptor, se enciende la luz... Sólo si estaba apagada
 function enciende() {

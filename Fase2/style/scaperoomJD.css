@@ -14,7 +14,7 @@ body {
 .escena {
   height: 784px;
   margin: auto;
-  background-image: url("../img/Casa.png"); /* Imagen de Wombo Dream */
+  background-image: url("../img/Casa.png");
   background-size:cover;
   position: relative;
 }
@@ -53,9 +53,10 @@ body {
 }
 
 .derecha {
+  display: none;
   width: 58px;
   height: 403px;
-  background-color: white;
+  background-color: blue;
   position: absolute;
   left:420px;
   top: 139px;
@@ -64,8 +65,62 @@ body {
 .izquierda {
   width: 79px;
   height: 412px;
-  background-color: white;
+  background-color: transparent;
   position: absolute;
   left:20px;
   top: 129px;
+}
+.derechaBlock {
+  width: 58px;
+  height: 403px;
+  background-color: transparent;
+  position: absolute;
+  left:420px;
+  top: 139px;
+}
+
+.izquierdaBlock {
+  display: none;
+  width: 79px;
+  height: 412px;
+  background-color: blue;
+  position: absolute;
+  left:20px;
+  top: 129px;
+}
+
+.cajamusica {
+  display: none; /* Inicialmente no se verá la caja de música */
+  width: 20px;
+  height: 38px;
+  background-image: url("../img/cajamusica.png");
+  background-size: cover;
+  position: absolute;
+  left:435px;
+  top: 462px;
+}
+
+.codigo {
+  display: none; /* Inicialmente no se verá el cádigo*/
+  width: 380px;
+  height: 300px;
+  background-image: url("../img/codigo.png");
+  background-size: cover;
+  position: absolute;
+  top: 200px;
+  left: 50px;
+}
+
+.codigoP{
+  font-family: "ComicKids-WyvKG";
+  background-color: lightcoral;
+  padding: 3px;
+  position: absolute;
+  display: none;
+  top: 539px;
+}
+
+#divincorrecto2{
+  margin: auto;
+  width: 480px;
 }
