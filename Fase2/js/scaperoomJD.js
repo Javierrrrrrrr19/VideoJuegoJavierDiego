@@ -76,7 +76,7 @@ function codigo() {
   //Mostramos el código
   document.getElementById("codigo").style.display = "block";
   // Cambio el mensaje del bocadillo
-  document.getElementById("parrafo1").innerHTML = "J-Este código lo puedar en la otra puerta";
+  document.getElementById("parrafo1").innerHTML = "J-Este código lo puedo usar en la otra puerta";
 }
 function volver() {
   //Oculto el código
