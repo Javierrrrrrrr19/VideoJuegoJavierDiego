@@ -24,12 +24,14 @@
     <div class="cajamusica" id="cajamusica" onclick="codigo()"></div>
     <div class="codigo" id="codigo" onclick="volver()"></div>
     <div class="codigoP" id="codigoP">
-      <input type="number" id="codigoAceptado"></p>
+      <input type="number" id="codigoAceptado" min="1000" max="9999"></p>
       <p><input type="button" value="Probar" onclick="probar()"></p>
       <div id="divincorrecto2"></div>
     </div>
     <div class="llave" id="llave" onclick="llaveCandado()"></div>
-    <div class="interruptor" id="interruptor" onclick="enciende()"></div>
+    <div class="candado" id="candado" onclick="sotano()"></div>
+    <img src="img/interruptorA.png" class="interruptorA" id="interruptorA" onclick="enciende()">
+    <img src="img/interruptorB.png" class="interruptorB" id="interruptorB">
   </main>
   <footer class="mensaje" id="bocadillo">
      <p id="parrafo1">Jugador - Me han dicho unos amigos que en esa casa hay polvos mágicos.</p>

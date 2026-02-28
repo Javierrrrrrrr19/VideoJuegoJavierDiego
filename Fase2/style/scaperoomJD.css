@@ -125,14 +125,43 @@ body {
   width: 480px;
 }
 
-
 .llave {
-  display: none; /* Inicialmente no se verá la caja de música */
+  display: none; /* Inicialmente no se verá la llave */
   width: 18px;
   height: 7px;
   background-image: url("../img/llave.png");
   background-size: cover;
   position: absolute;
+  left:43px;
+  top: 404px;
+}
+
+.candado {
+  display: none; /* Inicialmente no se verá el candado */
+  width: 28px;
+  height: 44px;
+  background-image: url("../img/candado.png"); 
+  position: absolute;
+  left:244px;
+  top: 290px;
+}
+
+.interruptorA {
+  display: none; /* Inicialmente no se verá el interruptor */
+  width: 28px;
+  height: 34px;
+  position: absolute;
+  background-size: cover;
+  left:43px;
+  top: 404px;
+}
+
+.interruptorB {
+  display: none; /* Inicialmente no se verá el interruptor */
+  width: 28px;
+  height: 34px;
+  position: absolute;
+  background-size: cover;
   left:43px;
   top: 404px;
 }

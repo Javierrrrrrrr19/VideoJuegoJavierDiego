@@ -35,19 +35,22 @@ function respuesta() {
     document.getElementById("pregunta").innerHTML = "Tienes una cerilla y entras en una habitación oscura con <br>-una vela, <br>-una lampara de aceite <br>-una chimenea<br> ¿Que enciendes primero?";
     document.getElementById("parrafo1").innerHTML = "Para entrar a la casa debes de resolver 2 acertijos";
     document.getElementById("respuesta").value = "";
+    texto.textContent = "";
   //Si la respuesta es cerilla oculto el div y cambio el mensaje
   } else if (respuesta == "cerilla") {
     document.getElementById("pregunta").innerHTML = "Tom mide 1,80 y trabaja en una carnieceriá y lleva zapatos de la talla 45<br> ¿Que pesa?";
     document.getElementById("parrafo1").innerHTML = "Para entrar a la casa debes de resolver 1 acertijo";
     document.getElementById("respuesta").value = "";
+    texto.textContent = "";
   //Si la respuesta es carne oculto el div y cambio el mensaje
   } else if (respuesta == "carne") {
     document.getElementById("acertijos").style.display = "none";
     document.getElementById("parrafo1").innerHTML = "Oyes una melodía que proviene de una de las habitaciones";
     document.getElementById("principal").style.backgroundImage = "url(img/Pasillo.png)";
     document.getElementById("respuesta").value = "";
+    texto.textContent = "";
   } else {//Si la respuesta no es alguna de las anteriores indico que se ha equivocado
-    texto.textContent = "Respuesta incorrecta";
+    texto.textContent = "Respuesta incorrecta. Solo una palabra por respuesta(Por si acaso)";
     contenedor.style.backgroundColor = "lightcoral";
   }
 }
@@ -66,7 +69,7 @@ function entradaIzq() {
   //Muestro la caja de música
   document.getElementById("cajamusica").style.display = "block";
   // Cambio el mensaje del bocadillo
-  document.getElementById("parrafo1").innerHTML = "Encuentra la caja música";
+  document.getElementById("parrafo1").innerHTML = "Encuentra la caja de música";
 }
 function codigo() {
   // Oculto la puerta de la izquierda, ya no vamos a utilizarla
@@ -76,7 +79,7 @@ function codigo() {
   //Mostramos el código
   document.getElementById("codigo").style.display = "block";
   // Cambio el mensaje del bocadillo
-  document.getElementById("parrafo1").innerHTML = "J-Este código lo puedo usar en la otra puerta";
+  document.getElementById("parrafo1").innerHTML = "Jugador - Este código me puede servir para la otra puerta";
 }
 function volver() {
   //Oculto el código
@@ -87,11 +90,12 @@ function volver() {
   document.getElementById("izquierdaBlock").style.display = "block";
   document.getElementById("derecha").style.display = "block";
   //Muestro el mensaje
-  document.getElementById("parrafo1").innerHTML = "J-Probemos";
+  document.getElementById("parrafo1").innerHTML = "Jugador - Probemos";
 }
+//Desde ESCENA4: Habitación 2
 function izquierdaBlock() {
   //Muestro el mensaje
-  document.getElementById("parrafo1").innerHTML = "Para que volver aquí";
+  document.getElementById("parrafo1").innerHTML = "Jugador - Para que volver aquí";
 }
 //Desde ESCENA3: Habitación 1
 function entradaDer() {
@@ -103,18 +107,19 @@ function entradaDer() {
   // Cambio el mensaje del bocadillo
   document.getElementById("parrafo1").innerHTML = "Pon el código";
 }
-//Desde ESCENA3: Habitación 2
+
 let contenedordos = document.getElementById("divincorrecto2");
 let textodos = document.createElement("span");
 contenedordos.appendChild(textodos);
 function probar() {
   // Recojo la respuesta y lo paso a número
   let respuesta = document.getElementById("codigoAceptado").valueAsNumber;
-  //Si la respuesta es correcta oculto el div y cambio el mensaje
+  //Si la respuesta es correcta oculto el div, muestro el nuevo escenario y cambio el mensaje
   if (respuesta == 1985) {
     document.getElementById("codigoP").style.display = "none";
     document.getElementById("principal").style.backgroundImage = "url(img/hab2.png)";
-    document.getElementById("parrafo1").innerHTML = "Hay una llave en esta habitacion, debes de encontrarla.";
+    document.getElementById("parrafo1").innerHTML = "Hay una llave en esta habitacion";
+    document.getElementById("parrafo2").innerHTML = "Debes de encontrarla";
     document.getElementById("llave").style.display = "block";
 
     document.getElementById("codigoAceptado").value = "";
@@ -123,17 +128,39 @@ function probar() {
     contenedordos.style.backgroundColor = "lightcoral";
   }
 }
-// Desde ESCENA2: Al hacer click en el interruptor, se enciende la luz... Sólo si estaba apagada
+
+function llaveCandado() {
+  // Oculto la llave, ya no vamos a utilizarla
+  document.getElementById("llave").style.display = "none";
+  // Muestro el candado
+  document.getElementById("candado").style.display = "block";
+  // Cambio el mensaje del bocadillo
+  document.getElementById("parrafo1").innerHTML = "Ya tienes la llave";
+  document.getElementById("parrafo2").innerHTML = "Jugador - Para que serviría una llave";
+}
+// Desde ESCENA5: Sotano apagado
+function sotano() {
+  // Oculto la llave, ya no vamos a utilizarla
+  document.getElementById("candado").style.display = "none";
+  // Muestro el candado
+  document.getElementById("interruptorA").style.display = "block";
+  //Ponemos la imagen del sótano
+  document.getElementById("principal").style.backgroundImage = "url(img/sotanoA.png)";
+  // Cambio el mensaje del bocadillo
+  document.getElementById("parrafo1").innerHTML = "Jugador - No se ve nada";
+  document.getElementById("parrafo2").innerHTML = "Jugador - Tiene que haber algún interruptor por aquí";
+}
+// Desde ESCENA6: Sotano encendido
 function enciende() {
   // Cambio la imagen de fondo cuando enciendo la luz
-  document.getElementById("principal").style.backgroundImage = "url(img/sotanoEncendido.jpg)";
-  // Ponemos la imagen del interruptor más nítido
-  document.getElementById("interruptor").style.backgroundImage = "url(img/interruptor.png)";
-  // Evitamos que el interruptor vuelva a ser pulsado, desactivando los eventos de ratón
-  document.getElementById("interruptor").style.pointerEvents = "none";
-  //
+  document.getElementById("principal").style.backgroundImage = "url(img/sotanoB.png)";
+  // Cambiazo de interruptoes
+  document.getElementById("interruptorA").style.display = "none";
+  document.getElementById("interruptorB").style.display = "block";
+  // Cambio el mensaje del bocadillo
+  document.getElementById("parrafo1").innerHTML = "Jugador - Una caja fuerte?";
+  document.getElementById("parrafo2").innerHTML = "Jugador - Ahí pueden estar los polvos mágicos";
 }
+// Desde ESCENA7: Acertijo caja fuerte
 
-// Desde ESCENA3: Al hacer click en la pata de Togo, aparece el perro
-
-// Desde ESCENA4: Idea un nuevo evento que desencadene alguna acción en tu página
+// Desde ESCENA8: Finales
