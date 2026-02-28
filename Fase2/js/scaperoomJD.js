@@ -114,7 +114,9 @@ function probar() {
   if (respuesta == 1985) {
     document.getElementById("codigoP").style.display = "none";
     document.getElementById("principal").style.backgroundImage = "url(img/hab2.png)";
-    document.getElementById("parrafo1").innerHTML = "Encuentra las llaves";
+    document.getElementById("parrafo1").innerHTML = "Hay una llave en esta habitacion, debes de encontrarla.";
+    document.getElementById("llave").style.display = "block";
+
     document.getElementById("codigoAceptado").value = "";
   } else {//Si la respuesta no es alguna de las anteriores indico que se ha equivocado
     textodos.textContent = "Respuesta incorrecta";
@@ -131,6 +133,7 @@ function enciende() {
   document.getElementById("interruptor").style.pointerEvents = "none";
   //
 }
+
 // Desde ESCENA3: Al hacer click en la pata de Togo, aparece el perro
 
 // Desde ESCENA4: Idea un nuevo evento que desencadene alguna acción en tu página

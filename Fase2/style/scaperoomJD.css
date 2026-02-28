@@ -124,3 +124,15 @@ body {
   margin: auto;
   width: 480px;
 }
+
+
+.llave {
+  display: none; /* Inicialmente no se verá la caja de música */
+  width: 18px;
+  height: 7px;
+  background-image: url("../img/llave.png");
+  background-size: cover;
+  position: absolute;
+  left:43px;
+  top: 404px;
+}
