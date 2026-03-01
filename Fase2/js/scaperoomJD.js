@@ -210,7 +210,7 @@ function ganas() {
 
 function pierdes() {
   //Ocultamos el div
-  document.getElementById("final").style.display = "block";
+  document.getElementById("final").style.display = "none";
   //Cambiamos el fondo
   document.getElementById("principal").style.backgroundImage = "url(img/hasperdido.png)";
   document.getElementById("parrafo1").innerHTML = "Has perdido. No has cumplido tu objetivo";
