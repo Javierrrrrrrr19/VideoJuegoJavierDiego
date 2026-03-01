@@ -142,7 +142,7 @@ function llaveCandado() {
 function sotano() {
   // Oculto la llave, ya no vamos a utilizarla
   document.getElementById("candado").style.display = "none";
-  // Muestro el candado
+  // Muestro el interuptor y la caja fuerte
   document.getElementById("interruptorA").style.display = "block";
   document.getElementById("cajaFuerteA").style.display = "block";
   //Ponemos la imagen del sótano
@@ -155,15 +155,47 @@ function sotano() {
 function enciende() {
   // Cambio la imagen de fondo cuando enciendo la luz
   document.getElementById("principal").style.backgroundImage = "url(img/sotanoB.png)";
-  // Cambiazo de interruptoes
+  // Cambiazo de interruptoes y caja fuerte
   document.getElementById("interruptorA").style.display = "none";
   document.getElementById("interruptorB").style.display = "block";
   document.getElementById("cajaFuerteA").style.display = "none";
-    document.getElementById("cajaFuerteB").style.display = "block";
+  document.getElementById("cajaFuerteB").style.display = "block";
   // Cambio el mensaje del bocadillo
   document.getElementById("parrafo1").innerHTML = "Jugador - Una caja fuerte?";
   document.getElementById("parrafo2").innerHTML = "Jugador - Ahí pueden estar los polvos mágicos";
 }
 // Desde ESCENA7: Acertijo caja fuerte
+function acertijoCajaFuerte() {
+  // Muestro el acertijo
+  document.getElementById("matematico").style.display = "block";
+  // Evitamos que la caja fuerte vuelva a ser pulsado, desactivando los eventos de ratón
+  document.getElementById("cajaFuerteB").style.pointerEvents = "none";
+  // Cambio el mensaje del bocadillo
+  document.getElementById("parrafo1").innerHTML = "Para abrir la caja fuerte debes de resolver este acertijo";
+  document.getElementById("parrafo2").innerHTML = "";
+}
 
+let contenedortres = document.getElementById("divincorrecto3");
+let textotres = document.createElement("span");
+contenedortres.appendChild(textotres);
+function resultado() {
+  // Recojo la respuesta y lo paso a número
+  let respuesta = Number(document.getElementById("numeroAceptado").value);
+  //Si la respuesta es correcta oculto el div, muestro el nuevo escenario y cambio el mensaje
+  if (respuesta == 13) {
+    //MOstramos el final
+    document.getElementById("final").style.display = "block";
+    //Ocultamos todo
+    document.getElementById("matematico").style.display = "none";
+    document.getElementById("interruptorB").style.display = "none";
+    document.getElementById("cajaFuerteB").style.display = "none";
+    // Cambio el mensaje del bocadillo y el valor del resultado
+    document.getElementById("parrafo1").innerHTML = "Has consegido los feresquitos";
+    document.getElementById("parrafo2").innerHTML = "Los tomas o no?";
+    document.getElementById("numeroAceptado").value = "";
+  } else {//Si la respuesta no es alguna de las anteriores indico que se ha equivocado
+    textotres.textContent = "Respuesta incorrecta";
+    contenedortres.style.backgroundColor = "lightcoral";
+  }
+}
 // Desde ESCENA8: Finales

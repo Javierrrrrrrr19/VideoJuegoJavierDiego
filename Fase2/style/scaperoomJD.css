@@ -186,3 +186,27 @@ body {
   left:210px;
   top: 620px;
 }
+
+.matematico{
+  font-family: "ComicKids-WyvKG";
+  background-color: lightcoral;
+  padding: 3px;
+  position: absolute;
+  display: none;
+  top: 239px;
+}
+
+#divincorrecto3{
+  margin: auto;
+  width: 480px;
+}
+
+.final{
+  width: 480px;
+  height: 784px;
+  font-family: "ComicKids-WyvKG";
+  text-align: center;
+  background-color: black;
+  position: absolute;
+  display: none;
+}
