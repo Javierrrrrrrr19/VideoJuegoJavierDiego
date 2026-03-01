@@ -210,3 +210,12 @@ body {
   position: absolute;
   display: none;
 }
+
+.repetir{
+  width: 180px;
+  height: 150px;
+  position: absolute;
+  display: none;
+  left: 170px;
+  top: 590px;
+}

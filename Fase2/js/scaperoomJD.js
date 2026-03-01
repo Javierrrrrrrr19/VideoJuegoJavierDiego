@@ -198,10 +198,12 @@ function resultado() {
     contenedortres.style.backgroundColor = "lightcoral";
   }
 }
-
+// Desde ESCENA8: Finales
 function ganas() {
   //Ocultamos el div
   document.getElementById("final").style.display = "none";
+  //Mostramos repetir
+  document.getElementById("repetir").style.display = "block";
   //Cambiamos el fondo
   document.getElementById("principal").style.backgroundImage = "url(img/hasganado.png)";
   document.getElementById("parrafo1").innerHTML = "Has ganado. Lo has conseguido";
@@ -211,10 +213,18 @@ function ganas() {
 function pierdes() {
   //Ocultamos el div
   document.getElementById("final").style.display = "none";
+  //Mostramos repetir
+  document.getElementById("repetir").style.display = "block";
   //Cambiamos el fondo
   document.getElementById("principal").style.backgroundImage = "url(img/hasperdido.png)";
   document.getElementById("parrafo1").innerHTML = "Has perdido. No has cumplido tu objetivo";
   document.getElementById("parrafo2").innerHTML = "¿Entonces para que te esmeras tanto por conseguirlo?";
-
 }
-// Desde ESCENA8: Finales
+function repetir() {
+  //Mostramos el inicio del juego y ocultamos el repetir
+  document.getElementById("repetir").style.display = "none";
+  document.getElementById("puerta").style.display = "block";
+  document.getElementById("principal").style.backgroundImage = "url(img/Casa.png)";
+  document.getElementById("parrafo1").innerHTML = "Jugador - Me han dicho unos amigos que en esa casa hay polvos mágicos.";
+  document.getElementById("parrafo2").innerHTML = "Entra a la casa";
+} 
