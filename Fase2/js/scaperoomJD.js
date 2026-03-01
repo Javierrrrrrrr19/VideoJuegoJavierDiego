@@ -144,6 +144,7 @@ function sotano() {
   document.getElementById("candado").style.display = "none";
   // Muestro el candado
   document.getElementById("interruptorA").style.display = "block";
+  document.getElementById("cajaFuerteA").style.display = "block";
   //Ponemos la imagen del sótano
   document.getElementById("principal").style.backgroundImage = "url(img/sotanoA.png)";
   // Cambio el mensaje del bocadillo
@@ -157,6 +158,8 @@ function enciende() {
   // Cambiazo de interruptoes
   document.getElementById("interruptorA").style.display = "none";
   document.getElementById("interruptorB").style.display = "block";
+  document.getElementById("cajaFuerteA").style.display = "none";
+    document.getElementById("cajaFuerteB").style.display = "block";
   // Cambio el mensaje del bocadillo
   document.getElementById("parrafo1").innerHTML = "Jugador - Una caja fuerte?";
   document.getElementById("parrafo2").innerHTML = "Jugador - Ahí pueden estar los polvos mágicos";

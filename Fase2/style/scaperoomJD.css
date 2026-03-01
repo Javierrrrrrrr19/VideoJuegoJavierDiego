@@ -165,3 +165,24 @@ body {
   left:43px;
   top: 404px;
 }
+
+.cajaFuerteA{
+  display: none; /* Inicialmente no se verá la llave */
+  width: 70px;
+  height: 70px;
+  background-image: url("../img/cajafuerteA.png");
+  background-size: cover;
+  position: absolute;
+  left:210px;
+  top: 620px;
+}
+.cajaFuerteB{
+  display: none; /* Inicialmente no se verá la llave */
+  width: 70px;
+  height: 70px;
+  background-image: url("../img/cajafuerteB.png");
+  background-size: cover;
+  position: absolute;
+  left:210px;
+  top: 620px;
+}
