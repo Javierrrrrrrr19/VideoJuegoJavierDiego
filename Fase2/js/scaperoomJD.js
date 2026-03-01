@@ -36,13 +36,13 @@ function respuesta() {
     document.getElementById("parrafo1").innerHTML = "Para entrar a la casa debes de resolver 2 acertijos";
     document.getElementById("respuesta").value = "";
     texto.textContent = "";
-  //Si la respuesta es cerilla oculto el div y cambio el mensaje
+    //Si la respuesta es cerilla oculto el div y cambio el mensaje
   } else if (respuesta == "cerilla") {
     document.getElementById("pregunta").innerHTML = "Tom mide 1,80 y trabaja en una carnieceriá y lleva zapatos de la talla 45<br> ¿Que pesa?";
     document.getElementById("parrafo1").innerHTML = "Para entrar a la casa debes de resolver 1 acertijo";
     document.getElementById("respuesta").value = "";
     texto.textContent = "";
-  //Si la respuesta es carne oculto el div y cambio el mensaje
+    //Si la respuesta es carne oculto el div y cambio el mensaje
   } else if (respuesta == "carne") {
     document.getElementById("acertijos").style.display = "none";
     document.getElementById("parrafo1").innerHTML = "Oyes una melodía que proviene de una de las habitaciones";
@@ -197,5 +197,24 @@ function resultado() {
     textotres.textContent = "Respuesta incorrecta";
     contenedortres.style.backgroundColor = "lightcoral";
   }
+}
+
+function ganas() {
+  //Ocultamos el div
+  document.getElementById("final").style.display = "none";
+  //Cambiamos el fondo
+  document.getElementById("principal").style.backgroundImage = "url(img/hasganado.png)";
+  document.getElementById("parrafo1").innerHTML = "Has ganado. Lo has conseguido";
+  document.getElementById("parrafo2").innerHTML = "Ahora eres feliz";
+}
+
+function pierdes() {
+  //Ocultamos el div
+  document.getElementById("final").style.display = "block";
+  //Cambiamos el fondo
+  document.getElementById("principal").style.backgroundImage = "url(img/hasperdido.png)";
+  document.getElementById("parrafo1").innerHTML = "Has perdido. No has cumplido tu objetivo";
+  document.getElementById("parrafo2").innerHTML = "¿Entonces para que te esmeras tanto por conseguirlo?";
+
 }
 // Desde ESCENA8: Finales
