@@ -47,6 +47,8 @@ function respuesta() {
     document.getElementById("acertijos").style.display = "none";
     document.getElementById("parrafo1").innerHTML = "Oyes una melodía que proviene de una de las habitaciones";
     document.getElementById("principal").style.backgroundImage = "url(img/Pasillo.png)";
+    document.getElementById("izquierda").style.display = "block";
+    document.getElementById("derechaBlock").style.display = "block";
     document.getElementById("respuesta").value = "";
     texto.textContent = "";
   } else {//Si la respuesta no es alguna de las anteriores indico que se ha equivocado
@@ -168,8 +170,6 @@ function enciende() {
 function acertijoCajaFuerte() {
   // Muestro el acertijo
   document.getElementById("matematico").style.display = "block";
-  // Evitamos que la caja fuerte vuelva a ser pulsado, desactivando los eventos de ratón
-  document.getElementById("cajaFuerteB").style.pointerEvents = "none";
   // Cambio el mensaje del bocadillo
   document.getElementById("parrafo1").innerHTML = "Para abrir la caja fuerte debes de resolver este acertijo";
   document.getElementById("parrafo2").innerHTML = "";

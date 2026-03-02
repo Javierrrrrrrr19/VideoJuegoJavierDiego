@@ -63,6 +63,7 @@ body {
 }
 
 .izquierda {
+  display: none;
   width: 79px;
   height: 412px;
   background-color: transparent;
@@ -71,6 +72,7 @@ body {
   top: 129px;
 }
 .derechaBlock {
+  display: none;
   width: 58px;
   height: 403px;
   background-color: transparent;
